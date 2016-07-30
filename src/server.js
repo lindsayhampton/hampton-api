@@ -8,6 +8,8 @@ app.get('/api/v1', function(req,res){
   res.json({hello: "world"});
 })
 
-app.listen(port, function() {
+var server = app.listen(port, function() {
   console.log('our server is running on port: ', port);
 });
+
+module.exports = server;
